@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 850px){
+  .nav-item {
+    display: none;
+  }
+  .nav-button {
+    display: block;
+  }
+  .nav-button span {
+    display: block;
+  }
+}
