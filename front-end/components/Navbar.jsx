@@ -29,6 +29,7 @@ export function Navbar() {
               <Link href='/'>Home</Link>
               <Link href='/about'>Sobre</Link>
               <Link href='/services'>Serviços</Link>
+              <Link href='/register'>Pontos de Descarte</Link>
               <Link href='/contact'>Contato</Link>
             </ul>
           </div>
