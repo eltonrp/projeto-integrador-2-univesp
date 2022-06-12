@@ -61,6 +61,26 @@ app.post('/post', async (req,res) => {
   })
 })
 
+app.delete('/delete/:id', async(req, res, next) => {
+  const  { id }  = req.params
+  console.log(id)
+  await Home.destroy({
+    where: {
+      id: id
+    }
+  }).then(() => {
+    return res.status(200).json({
+      erro: false,
+      mensagem: 'Ponto de Coleta apagado com sucesso'
+    })
+  }).catch(() => {
+    return res.status(401).json({
+      erro: true,
+      mensagem: 'Erro: Ponto de coleta não encontrado'
+    })
+  })
+})
+
 app.listen(8080, () => {
   console.log('Server iniciado na porta 8080...')
 })
