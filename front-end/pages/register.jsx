@@ -11,10 +11,10 @@ export default function Cadastro( {data} ) {
           {dados.map(register => {
             return (
                 <div key={register.id}>
-                  <div className="text-center font-semibold md:text-2xl text-lg">{register.name}</div>
-                  <div className="p-1 md:pl-60 md:text-lg border-b-2">{register.address}</div>
-                  <div className="p-1 md:pl-60 md:text-lg border-b-2">{register.cep}</div>
-                  <div className="p-1 md:pl-60 md:text-lg border-b-2"><a href={`tel: ${register.phone}`}>Contato: {register.phone}</a> </div>
+                  <div className="text-center font-semibold md:text-xl lg:text-2xl text-lg">{register.name}</div>
+                  <div className="p-1 md:pl-40 lg:pl-60 md:text-lg border-b-2">{register.address}</div>
+                  <div className="p-1 md:pl-40 lg:pl-60 md:text-lg border-b-2">{register.cep}</div>
+                  <div className="p-1 md:pl-40 lg:pl-60 md:text-lg border-b-2"><a href={`tel: ${register.phone}`}>Contato: {register.phone}</a> </div>
                 </div>
             )
           })}

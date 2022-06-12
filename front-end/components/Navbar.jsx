@@ -15,6 +15,7 @@ export function Navbar() {
           <Link href='/about'>Sobre</Link>
           <Link href='/services'>Serviços</Link>
           <Link href='/register'>Pontos de Descarte</Link>
+          <Link href='/newregister'>Cadastrar</Link>
           <Link href='/contact'>Contato</Link>
         </ul>
         <button onClick={() => setIsOpen(!isOpen)} className='flex-col space-y-1 p-2 border-2 rounded-md hover:border-gray-500 duration-300 hidden nav-button'>
@@ -30,6 +31,7 @@ export function Navbar() {
               <Link href='/about'>Sobre</Link>
               <Link href='/services'>Serviços</Link>
               <Link href='/register'>Pontos de Descarte</Link>
+              <Link href='/newregister'>Cadastrar</Link>
               <Link href='/contact'>Contato</Link>
             </ul>
           </div>
