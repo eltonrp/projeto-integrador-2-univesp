@@ -16,6 +16,16 @@ const Home = require('./models/Home')
 
 app.use(express.json())
 
+app.get('/getupdate/:id', async(req, res) => {
+  const { id }= req.params
+  await Home.findByPk(id, {attributes: ['id', 'name', 'address', 'cep', 'phone']})
+  .then((datahome) => {
+    return res.json({
+      datahome
+    })
+  })
+})
+
 app.get('/', async (req, res) => {
   
   // Busca todos os registros para mostrar
@@ -37,16 +47,6 @@ app.get('/', async (req, res) => {
 
 app.post('/post', async (req,res) => {
 
-  // const dataHome = await Home.findOne()
-
-  // Cria uma condição para salvar os dados
-  // if(dataHome) {
-  //   return res.status(400).json({
-  //     erro: true,
-  //     mensagem: 'Erro: Não cadastrado, já possui registro'
-  //   })
-  // }
-
   await Home.create(req.body)
   .then(() => {
     return res.json({
@@ -61,7 +61,8 @@ app.post('/post', async (req,res) => {
   })
 })
 
-app.delete('/delete/:id', async(req, res, next) => {
+app.delete('/delete/:id', async(req, res) => {
+
   const  { id }  = req.params
   console.log(id)
   await Home.destroy({
@@ -77,6 +78,27 @@ app.delete('/delete/:id', async(req, res, next) => {
     return res.status(401).json({
       erro: true,
       mensagem: 'Erro: Ponto de coleta não encontrado'
+    })
+  })
+})
+
+app.put('/update/:id', async(req, res) => {
+  
+  const { id } = req.params
+  const dataUpdate  = req.body
+  await Home.update(dataUpdate, {
+    where: {
+      id: id
+    }
+  }).then(() => {
+    return res.json({
+      erro: false,
+      mensagem: 'Registro Atualizado'
+    })
+  }).catch(() => {
+    return res.status(401).json({
+      erro: true,
+      mensagem: 'Algo deu errado, tente novamente'
     })
   })
 })

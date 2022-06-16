@@ -1,5 +1,6 @@
 import { Titulo } from "../components/Titulo"
 import Router from 'next/router'
+import Link from 'next/link'
 
 export default function Cadastro( {data} ) {
   
@@ -16,25 +17,26 @@ export default function Cadastro( {data} ) {
   }
 
   return (
-    <>      <Titulo nome='Pontos de Descarte' />
-      <div className="grid mt-4">
-        <div>
-          {dados.map(register => {
-            return (
-                <div key={register.id} className="bg-slate-200 m-4">
-                  <div className="text-center font-semibold md:text-xl lg:text-2xl text-lg">{register.name.toUpperCase()}</div>
-                  <div className="p-1 md:pl-40 lg:pl-60 md:text-lg border-b-2 border-slate-300">{register.address.toUpperCase()}</div>
-                  <div className="p-1 md:pl-40 lg:pl-60 md:text-lg border-b-2 border-slate-300">CEP: {register.cep}</div>
-                  <div className="p-1 md:pl-40 lg:pl-60 md:text-lg border-b-2 border-slate-300"><a href={`tel: ${register.phone}`}>Contato: {register.phone}</a> </div>
-                  <div className="flex justify-center mt-4">
-                    <button className="px-4  md:text-lg bg-red-400" onClick={() => deleteRegister(register.id)}>Delete</button>
-                    <button className="px-4  md:text-lg bg-blue-400">Update</button>
-                  </div>
+    <>      
+    <Titulo nome='Pontos de Descarte' />
+    <div className="grid mt-4">
+      <div>
+        {dados.map(register => {
+          return (
+              <div key={register.id} className="bg-slate-200 m-4">
+                <div className="text-center font-semibold md:text-xl lg:text-2xl text-lg">{register.name.toUpperCase()}</div>
+                <div className="p-1 md:pl-40 lg:pl-60 md:text-lg border-b-2 border-slate-300">{register.address.toUpperCase()}</div>
+                <div className="p-1 md:pl-40 lg:pl-60 md:text-lg border-b-2 border-slate-300">CEP: {register.cep}</div>
+                <div className="p-1 md:pl-40 lg:pl-60 md:text-lg border-b-2 border-slate-300"><a href={`tel: ${register.phone}`}>Contato: {register.phone}</a> </div>
+                <div className="flex justify-center mt-4">
+                  <button className="px-4  md:text-lg bg-red-400" onClick={() => deleteRegister(register.id)}>Delete</button>
+                  <button className="px-4  md:text-lg bg-blue-400"><Link as={`/update/${register.id}`} href='/update/[id]/'>Update</Link></button>
                 </div>
-            )
-          })}
-        </div>
+              </div>
+          )
+        })}
       </div>
+    </div>
     </>
   )
 }
