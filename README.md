@@ -22,10 +22,10 @@
 #### MySQL
 * Sistema Gerenciador de Banco de Dados Relacional
 * Utilizado para criar a tabela com as seguintes colunas:
-  ** Nome (Nome do Ponto de Coleta)
-  ** Endereço
-  ** CEP
-  ** Contato
+** Nome (Nome do Ponto de Coleta)
+** Endereço
+** CEP
+** Contato
 #### Sequelize
 * ORM - Object-Relational Mapping, faz o mapeamento objeto-relacional
 * Utilizado para abstrair algumas implementações do Banco de Dados na API e assim facilitar o desenvolvimento
