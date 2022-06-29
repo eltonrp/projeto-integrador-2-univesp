@@ -16,8 +16,8 @@
 ### Back-end
 #### Node.js
 * Aplicação, ambiente ou plataforma que permite o processamento, a renderização e a execução de elementos escritos em linguagem não suportada nativamente pelo sistema
-* Utilizado para implementar a *API* da aplicação
-  * A *API* faz a comunicação do front-end, parte visível ao usuário, com o banco de dados, na forma de requisições/respostas como, leitura, criação, atualização e exclusão dos elementos do projeto
+* Utilizado para implementar a **API** da aplicação
+  * A **API** faz a comunicação do front-end, parte visível ao usuário, com o banco de dados, na forma de requisições/respostas como, leitura, criação, atualização e exclusão dos elementos do projeto
 
 #### MySQL
 * Sistema Gerenciador de Banco de Dados Relacional
@@ -27,5 +27,5 @@
   * CEP
   * Contato
 #### Sequelize
-* *ORM* - Object-Relational Mapping, faz o mapeamento objeto-relacional
+* **ORM** - Object-Relational Mapping, faz o mapeamento objeto-relacional
 * Utilizado para abstrair algumas implementações do Banco de Dados na API e assim facilitar o desenvolvimento
