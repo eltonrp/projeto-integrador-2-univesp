@@ -16,7 +16,7 @@ export default function Update( {data} ) {
   const sendUpdate = async e => {
     e.preventDefault()
     try {
-      await fetch(`http://localhost:8080/update/${dados.id}`, {
+      await fetch(`https://coletadb.herokuapp.com/update/${dados.id}`, {
         method: 'PUT',
         body: JSON.stringify(register),
         headers: { 'Content-Type': 'application/json' }
@@ -51,7 +51,7 @@ export default function Update( {data} ) {
 export async function getServerSideProps({ params, res }) {
   
   const idUpdate = params.id
-  const response = await fetch(`http://localhost:8080/getupdate/${idUpdate}`)
+  const response = await fetch(`https://coletadb.herokuapp.com/getupdate/${idUpdate}`)
   const data = await response.json()
   return {
     props: { data }

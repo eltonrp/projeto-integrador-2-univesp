@@ -8,7 +8,7 @@ export default function Cadastro( {data} ) {
 
   const deleteRegister = async registerId => {
     try {
-      await fetch(`http://localhost:8080/delete/${registerId}`, {
+      await fetch(`https://coletadb.herokuapp.com/delete/${registerId}`, {
         method: 'DELETE',
       }).then(Router.reload(window.location.pathname))
     } catch(err) {
@@ -42,7 +42,7 @@ export default function Cadastro( {data} ) {
 }
 
 export async function getServerSideProps() {
-  const response = await fetch(`http://localhost:8080/`)
+  const response = await fetch(`https://coletadb.herokuapp.com/`)
   const data = await response.json()
 
   return { props: {data} }

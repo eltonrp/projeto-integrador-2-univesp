@@ -16,7 +16,7 @@ export default function NewRegister() {
   const sendRegister = async e => {
     e.preventDefault()
     try {
-      await fetch('http://localhost:8080/post', {
+      await fetch('https://coletadb.herokuapp.com/post', {
         method: 'POST',
         body: JSON.stringify(dataForm),
         headers: { 'Content-Type': 'application/json' }
