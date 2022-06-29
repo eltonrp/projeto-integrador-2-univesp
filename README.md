@@ -1,5 +1,5 @@
-# Projeto Integrador II
- Projeto desenvolvido em grupo como exigência da disciplina Projeto Integrador em Computação II da Univesp.
+# Projeto Integrador em Computação II
+ Projeto desenvolvido em grupo como exigência da disciplina Projeto Integrador em Computação II da Univesp, Turma 3, Grupo 16 - Polo Campinas-SP / Barueri-SP
 ## Título do Projeto
 ***Estímulo do descarte correto de óleo doméstico através da tecnologia e educação ambiental***
 ## Tecnologias Utilizadas
