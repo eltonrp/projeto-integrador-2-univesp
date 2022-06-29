@@ -49,7 +49,7 @@
 #### Vercel
 * Utilizado para armazenar o código front-end
 * Link da aplicação
-  * (https://descarte-inteligente.vercel.app)
+  * https://descarte-inteligente.vercel.app
 #### Heroku
 * Utilizado para hospedagem do back-end da aplicação
   * Banco de dados MySQL
