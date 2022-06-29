@@ -40,11 +40,11 @@
 ### Controle de Versão
 #### Git
 * Sistema de controle de versão de arquivos
-* Usado para criação e controle do repositório dos códigos desenvolvidos no projeto
+* Usado para criação e controle do repositório dos códigos desenvolvidos no projeto, em nuvem e localmente 
 * Auxiliar no envio do código para plataformas em nuvem
 #### GitHub
 * Plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git
-* Utilizado em conjunto com Git para gerenciar e armazenar o código em nuvem e localmente
+* Utilizado em conjunto com Git para gerenciar e armazenar o código
 ### Plataformas em nuvem
 #### Vercel
 * Utilizado para armazenar o código front-end
